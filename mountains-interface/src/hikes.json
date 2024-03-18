@@ -1,0 +1,155 @@
+[
+  {
+    "number": 0,
+    "name": "Everest",
+    "height": 29032,
+    "length": 43,
+    "difficulty": "Expert",
+    "state": "Nepal",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006_%28square%29.jpg"
+  },
+  {
+    "number": 1,
+    "name": "Washington",
+    "height": 6288,
+    "length": 8,
+    "difficulty": "Medium",
+    "state": "New Hampshire",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/White_Mountains_12_30_09_81.jpg/544px-White_Mountains_12_30_09_81.jpg"
+  },
+  {
+    "number": 2,
+    "name": "Katahdin",
+    "height": 5268,
+    "length": 10,
+    "difficulty": "Hard",
+    "state": "Maine",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Katahdin.jpg/544px-Katahdin.jpg"
+  },
+  {
+    "number": 3,
+    "name": "Mansfield",
+    "height": 4393,
+    "length": 7,
+    "difficulty": "Medium",
+    "state": "Vermont",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Mount_mansfield_20040926.jpg/544px-Mount_mansfield_20040926.jpg"
+  },
+  {
+    "number": 4,
+    "name": "Lafayette",
+    "height": 5249,
+    "length": 9,
+    "difficulty": "Hard",
+    "state": "New Hampshire",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Mt._Lafayette_from_Franconia_Ridge.JPG/544px-Mt._Lafayette_from_Franconia_Ridge.JPG"
+  },
+  {
+    "number": 5,
+    "name": "Camel's Hump",
+    "height": 4083,
+    "length": 6,
+    "difficulty": "Medium",
+    "state": "Vermont",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/CamelsHumpMT_20060728.jpg/544px-CamelsHumpMT_20060728.jpg"
+  },
+  {
+    "number": 6,
+    "name": "Lincoln",
+    "height": 5089,
+    "length": 5,
+    "difficulty": "Hard",
+    "state": "New Hampshire",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Mount_Lincoln%2C_New_Hampshire_from_Little_Haystack.jpg/544px-Mount_Lincoln%2C_New_Hampshire_from_Little_Haystack.jpg"
+  },
+  {
+    "number": 7,
+    "name": "Moosilauke",
+    "height": 4802,
+    "length": 7.5,
+    "difficulty": "Medium",
+    "state": "New Hampshire",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Mtmoosilaukeprofile.jpg"
+  },
+  {
+    "number": 8,
+    "name": "Monroe",
+    "height": 5384,
+    "length": 4,
+    "difficulty": "Medium",
+    "state": "New Hampshire",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Mt-monroe_summit.jpg/544px-Mt-monroe_summit.jpg"
+  },
+  {
+    "number": 9,
+    "name": "Madison",
+    "height": 5367,
+    "length": 8.5,
+    "difficulty": "Hard",
+    "state": "New Hampshire",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Mt._Madison_008.jpg/544px-Mt._Madison_008.jpg"
+  },
+  {
+    "number": 10,
+    "name": "Adams",
+    "height": 5774,
+    "length": 9,
+    "difficulty": "Hard",
+    "state": "New Hampshire",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Mount_Adams_NH_from_Madison.jpg/544px-Mount_Adams_NH_from_Madison.jpg"
+  },
+  {
+    "number": 11,
+    "name": "Jefferson",
+    "height": 5712,
+    "length": 8,
+    "difficulty": "Hard",
+    "state": "New Hampshire",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Mt._Jefferson_from_Mt._Washington.JPG/544px-Mt._Jefferson_from_Mt._Washington.JPG"
+  },
+  {
+    "number": 12,
+    "name": "Eisenhower",
+    "height": 4780,
+    "length": 6.5,
+    "difficulty": "Medium",
+    "state": "New Hampshire",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Mount_Eisenhower.JPG/544px-Mount_Eisenhower.JPG"
+  },
+  {
+    "number": 13,
+    "name": "Liberty",
+    "height": 4459,
+    "length": 7,
+    "difficulty": "Medium",
+    "state": "New Hampshire",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MtLiberty.jpg/544px-MtLiberty.jpg"
+  },
+  {
+    "number": 14,
+    "name": "Ellis",
+    "height": 2644,
+    "length": 3,
+    "difficulty": "Easy",
+    "state": "New Hampshire",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Glen_Ellis_Falls.jpg/500px-Glen_Ellis_Falls.jpg"
+  },
+  {
+    "number": 15,
+    "name": "Chocorua",
+    "height": 3480,
+    "length": 4.5,
+    "difficulty": "Medium",
+    "state": "New Hampshire",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mount_Chocorua_and_Chocorua_Lake_%288101442800%29_cropped.jpg/544px-Mount_Chocorua_and_Chocorua_Lake_%288101442800%29_cropped.jpg"
+  },
+  {
+    "number": 16,
+    "name": "Cardigan",
+    "height": 3121,
+    "length": 3,
+    "difficulty": "Easy",
+    "state": "New Hampshire",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/MtCardigan.jpg/544px-MtCardigan.jpg"
+  }
+]
