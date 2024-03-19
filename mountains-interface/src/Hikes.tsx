@@ -10,6 +10,8 @@ interface HikesProps {
   setSort: Dispatch<SetStateAction<string>>;
   setDiffFilter: Dispatch<SetStateAction<string>>;
   setStateFilter: Dispatch<SetStateAction<string>>;
+  toggleToDo: (mountainNumber: number) => void;
+  toDo: number[];
 }
 
 export default function Hikes(props: HikesProps) {
@@ -80,7 +82,13 @@ export default function Hikes(props: HikesProps) {
       </div>
       <div className="hikes">
         {props.hikes.map((hike) => (
-          <Mountain key={hike.number} hike={hike} />
+          <Mountain
+            key={hike.number}
+            hike={hike}
+            toggleToDo={props.toggleToDo}
+            cardInHikes={true}
+            toDo={props.toDo}
+          />
         ))}
       </div>
     </div>

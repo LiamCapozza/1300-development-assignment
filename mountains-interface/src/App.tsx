@@ -17,14 +17,23 @@ export type Hike = {
 
 function App() {
   const [hikes, setHikes] = useState<Hike[]>(hikeData);
-  const [toDo, setToDo] = useState<Hike[]>([]);
-
+  const [toDo, setToDo] = useState<number[]>([]);
   const [sort, setSort] = useState<string>("None");
   const [diffFilter, setDiffFilter] = useState<string>("None");
   const [stateFilter, setStateFilter] = useState<string>("None");
 
+  const toggleToDo = (mountainNumber: number) => {
+    if (!toDo.includes(mountainNumber)) {
+      setToDo([...toDo, mountainNumber]);
+    } else {
+      let tempArr: number[] = [...toDo];
+      let index = tempArr.indexOf(mountainNumber);
+      tempArr.splice(index, 1);
+      setToDo([...tempArr]);
+    }
+  };
+
   useEffect(() => {
-    console.log(sort);
     let hikeList: Hike[] = hikeData;
     if (diffFilter !== "None") {
       hikeList = hikeData.filter((hike) => hike.difficulty === diffFilter);
@@ -32,7 +41,11 @@ function App() {
     if (stateFilter !== "None") {
       hikeList = hikeList.filter((hike) => hike.state === stateFilter);
     }
-    if (sort === "Length - High to Low") {
+    if (sort === "None") {
+      hikeList = hikeList.sort((a, b) => {
+        return a.number - b.number;
+      });
+    } else if (sort === "Length - High to Low") {
       hikeList = hikeList.sort((a, b) => {
         return b.length - a.length;
       });
@@ -65,8 +78,10 @@ function App() {
         setSort={setSort}
         setDiffFilter={setDiffFilter}
         setStateFilter={setStateFilter}
+        toggleToDo={toggleToDo}
+        toDo={toDo}
       />
-      <ToDo />
+      <ToDo toDo={toDo} hikeData={[...hikeData]} toggleToDo={toggleToDo} />
     </div>
   );
 }
