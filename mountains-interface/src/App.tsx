@@ -22,6 +22,12 @@ function App() {
   const [diffFilter, setDiffFilter] = useState<string>("None");
   const [stateFilter, setStateFilter] = useState<string>("None");
 
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   const toggleToDo = (mountainNumber: number) => {
     if (!toDo.includes(mountainNumber)) {
       setToDo([...toDo, mountainNumber]);
@@ -66,10 +72,16 @@ function App() {
   }, [sort, diffFilter, stateFilter]);
 
   return (
-    <div className="App">
+    <div className={"App " + (isSidebarOpen ? "with-sidebar" : "")}>
       <header>
         <h1>Hike To-Do List Maker</h1>
       </header>
+      <button className="sidebar-toggle" onClick={toggleSidebar}>
+        {isSidebarOpen ? "Close To-Do" : "Open To-Do"}
+      </button>
+      <div className={"sidebar " + (isSidebarOpen ? "open" : "")}>
+        <ToDo toDo={toDo} hikeData={[...hikeData]} toggleToDo={toggleToDo} />
+      </div>
       <Hikes
         hikes={hikes}
         sort={sort}
@@ -81,7 +93,6 @@ function App() {
         toggleToDo={toggleToDo}
         toDo={toDo}
       />
-      <ToDo toDo={toDo} hikeData={[...hikeData]} toggleToDo={toggleToDo} />
     </div>
   );
 }

@@ -57,7 +57,7 @@
     "number": 6,
     "name": "Lincoln",
     "height": 5089,
-    "length": 5,
+    "length": 9,
     "difficulty": "Hard",
     "state": "New Hampshire",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Mount_Lincoln%2C_New_Hampshire_from_Little_Haystack.jpg/544px-Mount_Lincoln%2C_New_Hampshire_from_Little_Haystack.jpg"
@@ -151,5 +151,14 @@
     "difficulty": "Easy",
     "state": "New Hampshire",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/MtCardigan.jpg/544px-MtCardigan.jpg"
+  },
+  {
+    "number": 17,
+    "name": "College Hill",
+    "height": 99999,
+    "length": 100,
+    "difficulty": "Expert",
+    "state": "Rhode Island",
+    "image": "https://collegehilleye.com/wp-content/uploads/2020/01/CollegeHill-Homepage-CutAssets-Hero_optimized.jpg"
   }
 ]

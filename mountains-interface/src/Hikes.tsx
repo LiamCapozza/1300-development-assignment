@@ -17,10 +17,10 @@ interface HikesProps {
 export default function Hikes(props: HikesProps) {
   return (
     <div className="hikes-section">
-      <h1>Hikes</h1>
       <div className="sorts-filters">
         <div className="sorting">
           <label htmlFor="sorts">Sort by:</label>
+
           <select
             name="sorts"
             id="sorts"
@@ -37,47 +37,50 @@ export default function Hikes(props: HikesProps) {
               Height - Short to Tall
             </option>
           </select>
-          <button onClick={() => props.setSort("None")}>Reset Sorts</button>
+
+          <button className="reset" onClick={() => props.setSort("None")}>
+            X
+          </button>
         </div>
 
         <div className="filtering">
+          <label htmlFor="filterDiff">Filter by:</label>
+          <select
+            name="filterDiff"
+            id="filterDiff"
+            onChange={(e) => props.setDiffFilter(e.target.value)}
+            value={
+              props.diffFilter === "None" ? "Difficulty" : props.diffFilter
+            }
+          >
+            <option value="None">Difficulty</option>
+            <option value="Hard">Hard</option>
+            <option value="Medium">Medium</option>
+            <option value="Easy">Easy</option>
+          </select>
+
+          <label htmlFor="filterState">Filter by:</label>
+          <select
+            name="filterState"
+            id="filterState"
+            onChange={(e) => props.setStateFilter(e.target.value)}
+            value={props.stateFilter === "None" ? "State" : props.stateFilter}
+          >
+            <option value="None">State</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="Vermont">Vermont</option>
+            <option value="Maine">Maine</option>
+            <option value="Nepal">Nepal</option>
+          </select>
           <button
+            className="reset"
             onClick={() => {
               props.setDiffFilter("None");
               props.setStateFilter("None");
             }}
           >
-            Reset Filters
+            X
           </button>
-          <div className="filtering-diff">
-            <label htmlFor="filterDiff">Filter by difficulty:</label>
-            <select
-              name="filterDiff"
-              id="filterDiff"
-              onChange={(e) => props.setDiffFilter(e.target.value)}
-              value={props.diffFilter}
-            >
-              <option value="None">None</option>
-              <option value="Hard">Hard</option>
-              <option value="Medium">Medium</option>
-              <option value="Easy">Easy</option>
-            </select>
-          </div>
-          <div className="filtering-state">
-            <label htmlFor="filterState">Filter by state:</label>
-            <select
-              name="filterState"
-              id="filterState"
-              onChange={(e) => props.setStateFilter(e.target.value)}
-              value={props.stateFilter}
-            >
-              <option value="None">None</option>
-              <option value="New Hampshire">New Hampshire</option>
-              <option value="Vermont">Vermont</option>
-              <option value="Maine">Maine</option>
-              <option value="Nepal">Nepal</option>
-            </select>
-          </div>
         </div>
       </div>
       <div className="hikes">

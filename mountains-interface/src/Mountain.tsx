@@ -23,7 +23,7 @@ export default function Mountain(props: MountainProps) {
     <div className="mountain-card" id={props.hike.name}>
       <img src={props.hike.image} alt={props.hike.name} />
       <h3>{props.hike.name}</h3>
-      <div className="diff-save">
+      <div className={"diff-save " + props.hike.difficulty}>
         <p>{props.hike.difficulty}</p>
 
         <button
