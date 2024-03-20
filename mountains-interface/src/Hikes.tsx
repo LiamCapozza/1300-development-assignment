@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { Hike } from "./App";
 import Mountain from "./Mountain";
 
@@ -7,9 +7,11 @@ interface HikesProps {
   sort: string;
   diffFilter: string;
   stateFilter: string;
+  search: string;
   setSort: Dispatch<SetStateAction<string>>;
   setDiffFilter: Dispatch<SetStateAction<string>>;
   setStateFilter: Dispatch<SetStateAction<string>>;
+  setSearch: Dispatch<SetStateAction<string>>;
   toggleToDo: (mountainNumber: number) => void;
   toDo: number[];
 }
@@ -83,16 +85,26 @@ export default function Hikes(props: HikesProps) {
           </button>
         </div>
       </div>
+      <input
+        type="text"
+        placeholder="Search..."
+        onChange={(e) => props.setSearch(e.target.value)}
+        value={props.search}
+      ></input>
       <div className="hikes">
-        {props.hikes.map((hike) => (
-          <Mountain
-            key={hike.number}
-            hike={hike}
-            toggleToDo={props.toggleToDo}
-            cardInHikes={true}
-            toDo={props.toDo}
-          />
-        ))}
+        {props.hikes.length ? (
+          props.hikes.map((hike) => (
+            <Mountain
+              key={hike.number}
+              hike={hike}
+              toggleToDo={props.toggleToDo}
+              cardInHikes={true}
+              toDo={props.toDo}
+            />
+          ))
+        ) : (
+          <p>No results! Try again</p>
+        )}
       </div>
     </div>
   );

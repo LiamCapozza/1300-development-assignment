@@ -21,6 +21,7 @@ function App() {
   const [sort, setSort] = useState<string>("None");
   const [diffFilter, setDiffFilter] = useState<string>("None");
   const [stateFilter, setStateFilter] = useState<string>("None");
+  const [search, setSearch] = useState<string>("");
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -68,8 +69,14 @@ function App() {
         return a.height - b.height;
       });
     }
+    if (search !== "") {
+      let len = search.length;
+      hikeList = hikeList.filter(
+        (hike) => hike.name.slice(0, len).toLowerCase() === search.toLowerCase()
+      );
+    }
     setHikes([...hikeList]);
-  }, [sort, diffFilter, stateFilter]);
+  }, [sort, diffFilter, stateFilter, search]);
 
   return (
     <div className={"App " + (isSidebarOpen ? "with-sidebar" : "")}>
@@ -87,6 +94,8 @@ function App() {
         sort={sort}
         diffFilter={diffFilter}
         stateFilter={stateFilter}
+        search={search}
+        setSearch={setSearch}
         setSort={setSort}
         setDiffFilter={setDiffFilter}
         setStateFilter={setStateFilter}
