@@ -41,9 +41,12 @@ function App() {
   };
 
   useEffect(() => {
-    let hikeList: Hike[] = hikeData;
+    let hikeList: Hike[] = hikeData.filter(
+      (hike) => !toDo.includes(hike.number)
+    );
+
     if (diffFilter !== "None") {
-      hikeList = hikeData.filter((hike) => hike.difficulty === diffFilter);
+      hikeList = hikeList.filter((hike) => hike.difficulty === diffFilter);
     }
     if (stateFilter !== "None") {
       hikeList = hikeList.filter((hike) => hike.state === stateFilter);
@@ -76,7 +79,7 @@ function App() {
       );
     }
     setHikes([...hikeList]);
-  }, [sort, diffFilter, stateFilter, search]);
+  }, [sort, diffFilter, stateFilter, search, toDo]);
 
   return (
     <div className={"App " + (isSidebarOpen ? "with-sidebar" : "")}>
