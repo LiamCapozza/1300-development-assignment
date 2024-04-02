@@ -14,6 +14,7 @@ interface HikesProps {
   setSearch: Dispatch<SetStateAction<string>>;
   toggleToDo: (mountainNumber: number) => void;
   toDo: number[];
+  handlePopup: (hikeNumber: number) => void;
 }
 
 export default function Hikes(props: HikesProps) {
@@ -56,6 +57,7 @@ export default function Hikes(props: HikesProps) {
             }
           >
             <option value="None">Difficulty</option>
+            <option value="Expert">Expert</option>
             <option value="Hard">Hard</option>
             <option value="Medium">Medium</option>
             <option value="Easy">Easy</option>
@@ -100,6 +102,7 @@ export default function Hikes(props: HikesProps) {
               toggleToDo={props.toggleToDo}
               cardInHikes={true}
               toDo={props.toDo}
+              handlePopup={props.handlePopup}
             />
           ))
         ) : (

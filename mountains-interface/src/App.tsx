@@ -29,6 +29,8 @@ function App() {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const handlePopup = (hikeNum: number) => {};
+
   const toggleToDo = (mountainNumber: number) => {
     if (!toDo.includes(mountainNumber)) {
       setToDo([...toDo, mountainNumber]);
@@ -90,7 +92,13 @@ function App() {
         {isSidebarOpen ? "Close To-Do" : "Open To-Do"}
       </button>
       <div className={"sidebar " + (isSidebarOpen ? "open" : "")}>
-        <ToDo toDo={toDo} hikeData={[...hikeData]} toggleToDo={toggleToDo} />
+        <ToDo
+          toDo={toDo}
+          setToDO={setToDo}
+          hikeData={[...hikeData]}
+          toggleToDo={toggleToDo}
+          handlePopup={handlePopup}
+        />
       </div>
       <Hikes
         hikes={hikes}
@@ -104,6 +112,7 @@ function App() {
         setStateFilter={setStateFilter}
         toggleToDo={toggleToDo}
         toDo={toDo}
+        handlePopup={handlePopup}
       />
     </div>
   );

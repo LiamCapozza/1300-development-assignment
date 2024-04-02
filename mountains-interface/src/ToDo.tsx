@@ -1,11 +1,13 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { Hike } from "./App";
 import Mountain from "./Mountain";
 
 interface ToDoProps {
   toDo: number[];
+  setToDO: Dispatch<SetStateAction<number[]>>;
   hikeData: Hike[];
   toggleToDo: (mountainNumber: number) => void;
+  handlePopup: (hikeNumber: number) => void;
 }
 
 export default function ToDo(props: ToDoProps) {
@@ -25,6 +27,9 @@ export default function ToDo(props: ToDoProps) {
               {toDoHikes.length} {toDoHikes.length > 1 ? "hikes" : "hike"} left
               to do!
             </p>
+            <button id="clear-hikes" onClick={() => props.setToDO([])}>
+              Clear Hikes
+            </button>
             {toDoHikes.map((hike) => (
               <Mountain
                 key={hike.number}
@@ -32,6 +37,7 @@ export default function ToDo(props: ToDoProps) {
                 cardInHikes={false}
                 toggleToDo={props.toggleToDo}
                 toDo={props.toDo}
+                handlePopup={props.handlePopup}
               />
             ))}
           </>
